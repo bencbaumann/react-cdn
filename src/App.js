@@ -6,11 +6,9 @@ function App() {
   const [customPreview, setCustomPreview] = useState(false);
 
   const handleCustomPreview = () => {
-    setCustomPreview(prev=> {
-      customPreview ? window.pmc.style = "display: none;" : window.pmc.style = "display: block;";
-      return !prev;
-    };
-    
+    console.log("customPreview: ", customPreview)
+    customPreview ? window.pmc.style = "display: none;" : window.pmc.style = "display: block;";
+    setCustomPreview(!customPreview);
   }
   return (
     <div className="App">
