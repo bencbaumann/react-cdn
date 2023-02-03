@@ -3,11 +3,11 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const [customPreiew, setCustomPreview] = useState(false);
+  const [customPreview, setCustomPreview] = useState(false);
 
   const handleCustomPreview = () => {
-    customPreiew ? window.pmc.style = "display: none;" : window.pmc.style = "display: block;";
     setCustomPreview(!prev);
+    customPreview ? window.pmc.style = "display: none;" : window.pmc.style = "display: block;";
   }
   return (
     <div className="App">
